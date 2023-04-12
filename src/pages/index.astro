@@ -1,9 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import TgrIcon from '../components/TgrIcon.astro';
 ---
 
 <Layout title="TGR Group" desc="TGR Group">
-  <div class="text-primary text-center">
-    Hello, world
+  <div class="hero py-20">
+    <div class="hero-content text-center">
+      <div class="max-w-md">
+        <TgrIcon classSvg="h-36 mx-auto my-6" classT="fill-primary" classG="fill-secondary" classR="fill-secondary" />
+        <h1 class="text-5xl font-bold">Hello, world</h1>
+        <p class="py-6">TGR Groupはこういうもの。我々とともに云々かんぬん。</p>
+        <button class="btn btn-primary">Join us</button>
+      </div>
+    </div>
   </div>
 </Layout>
