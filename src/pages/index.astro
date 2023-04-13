@@ -4,13 +4,16 @@ import TgrIcon from '../components/TgrIcon.astro';
 ---
 
 <Layout title="TGR Group" desc="TGR Group">
-  <div class="hero py-20">
+  <div class="hero min-h-screen bg-gradient-to-br from-primary to-secondary text-primary-content">
     <div class="hero-content text-center">
       <div class="max-w-md">
-        <TgrIcon classSvg="h-36 mx-auto my-6" classT="fill-primary" classG="fill-secondary" classR="fill-secondary" />
+        <TgrIcon classSvg="h-36 mx-auto my-6 fill-primary-content" classT="fill-neutral" />
         <h1 class="text-5xl font-bold">Hello, world</h1>
-        <p class="py-6">TGR Groupはこういうもの。我々とともに云々かんぬん。</p>
-        <button class="btn btn-primary">Join us</button>
+        <div class="py-6">
+          <p>TGR Groupは、学生が主体となって、Web開発などのプロジェクトに取り組むグループです。プログラミングについて話したり、質問したりできる自由な場所です。</p>
+          <p>私たちと一緒に"何か"を作ってみませんか？</p>
+        </div>
+        <button class="btn">Join us</button>
       </div>
     </div>
   </div>
