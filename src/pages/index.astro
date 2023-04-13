@@ -18,3 +18,20 @@ import TgrIcon from '../components/TgrIcon.astro';
     </div>
   </div>
 </Layout>
+
+<script>
+const navbar = document.getElementById('navbar')
+window.onload = () => {
+  navbar.classList.remove('bg-base-100')
+  navbar.classList.add('text-primary-content')
+}
+window.onscroll = () => {
+  if (window.pageYOffset > 100) {
+    navbar.classList.remove('text-primary-content')
+    navbar.classList.add('bg-base-100')
+  } else if (window.pageYOffset < 50) {
+    navbar.classList.remove('bg-base-100')
+    navbar.classList.add('text-primary-content')
+  }
+}
+</script>
