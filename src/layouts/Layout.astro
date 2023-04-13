@@ -8,7 +8,7 @@ const { title, desc } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="ja" data-theme="winter" class="h-full">
+<html lang="ja" data-theme="winter" class="h-full bg-neutral">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -21,7 +21,9 @@ const { title, desc } = Astro.props;
     <div class="navbar bg-base-100">
       <a class="btn btn-ghost normal-case text-xl">TGR Group</a>
     </div>
-    <slot />
+    <div class="bg-base-100">
+      <slot />
+    </div>
     <footer class="footer footer-center p-4 bg-neutral text-neutral-content sticky top-[100vh]">
       <div>
         <p>&copy; 2023 TGR Group</p>
