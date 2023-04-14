@@ -4,14 +4,122 @@ import TgrIcon from '../components/TgrIcon.astro';
 ---
 
 <Layout title="TGR Group" desc="TGR Group">
-  <div class="hero py-20">
+  <div class="hero min-h-screen bg-gradient-to-br from-primary to-secondary text-primary-content">
     <div class="hero-content text-center">
       <div class="max-w-md">
-        <TgrIcon classSvg="h-36 mx-auto my-6" classT="fill-primary" classG="fill-secondary" classR="fill-secondary" />
+        <TgrIcon classSvg="h-36 mx-auto my-6 fill-primary-content" classT="fill-neutral" />
         <h1 class="text-5xl font-bold">Hello, world</h1>
-        <p class="py-6">TGR Groupはこういうもの。我々とともに云々かんぬん。</p>
-        <button class="btn btn-primary">Join us</button>
+        <div class="py-6">
+          <p>TGR Groupは、学生が主体となって、Web開発などのプロジェクトに取り組むグループです。プログラミングについて話したり、質問したりできる自由な場所です。</p>
+          <p>私たちと一緒に"何か"を作ってみませんか？</p>
+        </div>
+        <a href="#joinUs"><button class="btn">Join us</button></a>
       </div>
     </div>
   </div>
+  <div class="px-6 py-16 lg:py-20">
+    <div class="mx-auto w-fit flex flex-col lg:flex-row">
+      <div class="grow flex items-center lg:justify-center gap-6 px-12 lg:py-6 lg:flex-col">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="h-16 fill-current"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>
+        <p class="text-xl">プログラミング</p>
+      </div>
+      <div class="divider lg:divider-horizontal" />
+      <div class="grow flex items-center lg:justify-center gap-6 px-12 lg:py-6 lg:flex-col">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-16 fill-current"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M176 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64c-35.3 0-64 28.7-64 64H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64c0 35.3 28.7 64 64 64v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448c35.3 0 64-28.7 64-64h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448V280h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448V176h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448c0-35.3-28.7-64-64-64V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H280V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H176V24zM160 128H352c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H160c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32zm192 32H160V352H352V160z"/></svg>
+        <p class="text-xl">ハードウェア / ガジェット</p>
+      </div>
+      <div class="divider lg:divider-horizontal" />
+      <div class="grow flex items-center lg:justify-center gap-6 px-12 lg:py-6 lg:flex-col">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-16 fill-current"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M448 32H361.9l-1 1-127 127h92.1l1-1L453.8 32.3c-1.9-.2-3.8-.3-5.8-.3zm64 128V96c0-15.1-5.3-29.1-14-40l-104 104H512zM294.1 32H201.9l-1 1L73.9 160h92.1l1-1 127-127zM64 32C28.7 32 0 60.7 0 96v64H6.1l1-1 127-127H64zM512 192H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V192z"/></svg>
+        <p class="text-xl">動画編集</p>
+      </div>
+    </div>
+    <div class="text-center text-2xl lg:text-3xl pt-16">
+      色んな趣味の人、集めてみました
+    </div>
+  </div>
+  <div class="px-6 py-16 lg:py-20 bg-neutral text-neutral-content text-center">
+    <div class="text-5xl font-bold">
+      Blog !!
+    </div>
+    <p class="py-6">メンバーになると自由にブログを書くことができます。</p>
+    <button class="btn btn-primary">Check Out</button>
+  </div>
+  <div class="chat chat-start px-6 pt-16 lg:pt-20 w-fit mx-auto">
+    <div class="chat-image avatar">
+      <div class="w-10 rounded-full">
+        <img src="https://github.com/starprivate55.png" />
+      </div>
+    </div>
+    <div class="chat-bubble p-6 bg-base-200 text-neutral">
+      <p>TGR Group代表のスターです！</p>
+      <p>今年でTGRは2年目を迎えました。様々な問題に見舞われましたが、無事2周年を迎えることができて嬉しいです。</p>
+    </div>
+  </div>
+  <div id="joinUs" class="px-6 py-16 lg:py-20 text-center">
+    <div class="text-3xl font-bold">
+      TGR Groupに参加しよう
+    </div>
+    <div class="pt-6">
+      <p class="text-xl">現在メンバーは <b>6人</b></p>
+      <div class="avatar-group -space-x-6 w-fit mx-auto mt-3">
+        <div class="avatar">
+          <div class="w-12">
+            <img src="https://github.com/HARU-pc.png" />
+          </div>
+        </div>
+        <div class="avatar">
+          <div class="w-12">
+            <img src="https://github.com/KituneG0n.png" />
+          </div>
+        </div>
+        <div class="avatar">
+          <div class="w-12">
+            <img src="https://github.com/laddge.png" />
+          </div>
+        </div>
+        <div class="avatar">
+          <div class="w-12">
+            <img src="https://github.com/MWindows99.png" />
+          </div>
+        </div>
+        <div class="avatar">
+          <div class="w-12">
+            <img src="https://github.com/starprivate55.png" />
+          </div>
+        </div>
+        <div class="avatar">
+          <div class="w-12">
+            <img src="https://github.com/YumNumm.png" />
+          </div>
+        </div>
+      </div>
+      <div class="my-6">
+        フォームに必要事項を入力して参加リクエストを送ってください。
+      </div>
+      <button class="btn btn-primary">参加フォーム</button>
+    </div>
+  </div>
 </Layout>
+
+<script>
+const navbar = document.getElementById('navbar')
+window.onload = () => {
+  if (window.pageYOffset > 100) {
+    navbar.classList.remove('text-primary-content')
+    navbar.classList.add('bg-base-100')
+  } else if (window.pageYOffset < 50) {
+    navbar.classList.remove('bg-base-100')
+    navbar.classList.add('text-primary-content')
+  }
+}
+window.onscroll = () => {
+  if (window.pageYOffset > 100) {
+    navbar.classList.remove('text-primary-content')
+    navbar.classList.add('bg-base-100')
+  } else if (window.pageYOffset < 50) {
+    navbar.classList.remove('bg-base-100')
+    navbar.classList.add('text-primary-content')
+  }
+}
+</script>

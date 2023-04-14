@@ -7,6 +7,7 @@ module.exports = {
   plugins: [require('@tailwindcss/typography'), require('daisyui')],
   daisyui: {
     themes: [
+      'winter',
       {
         custom: {
           'primary': '#3c83f5',
