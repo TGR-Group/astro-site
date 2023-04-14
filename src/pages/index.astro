@@ -1,6 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import TgrIcon from '../components/TgrIcon.astro';
+import { Octokit } from '@octokit/rest'
+
+const octokit = new Octokit({
+  auth: import.meta.env.GH_TOKEN
+})
+
+const members = await octokit.paginate('GET /orgs/{org}/members', { org: 'TGR-Group' })
 ---
 
 <Layout title="TGR Group" desc="TGR Group">
@@ -61,38 +68,17 @@ import TgrIcon from '../components/TgrIcon.astro';
       TGR Groupに参加しよう
     </div>
     <div class="pt-6">
-      <p class="text-xl">現在メンバーは <b>6人</b></p>
+      <p class="text-xl">現在メンバーは <b>{members.length}人</b></p>
       <div class="avatar-group -space-x-6 w-fit mx-auto mt-3">
-        <div class="avatar">
-          <div class="w-12">
-            <img src="https://github.com/HARU-pc.png" />
+        {members.map((member) => (
+          <div class="avatar">
+            <a href={member.html_url} target="_blank">
+              <div class="w-12">
+                <img src={member.avatar_url} alt={`avatar_${member.login}`} />
+              </div>
+            </a>
           </div>
-        </div>
-        <div class="avatar">
-          <div class="w-12">
-            <img src="https://github.com/KituneG0n.png" />
-          </div>
-        </div>
-        <div class="avatar">
-          <div class="w-12">
-            <img src="https://github.com/laddge.png" />
-          </div>
-        </div>
-        <div class="avatar">
-          <div class="w-12">
-            <img src="https://github.com/MWindows99.png" />
-          </div>
-        </div>
-        <div class="avatar">
-          <div class="w-12">
-            <img src="https://github.com/starprivate55.png" />
-          </div>
-        </div>
-        <div class="avatar">
-          <div class="w-12">
-            <img src="https://github.com/YumNumm.png" />
-          </div>
-        </div>
+        ))}
       </div>
       <div class="my-6">
         フォームに必要事項を入力して参加リクエストを送ってください。
