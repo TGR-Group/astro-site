@@ -1,6 +1,6 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import TgrIcon from '../components/TgrIcon.astro';
+import Layout from '../layouts/Layout.astro'
+import TgrIcon from '../components/TgrIcon.astro'
 import { Octokit } from '@octokit/rest'
 
 const octokit = new Octokit({
@@ -91,6 +91,7 @@ const members = await octokit.paginate('GET /orgs/{org}/members', { org: 'TGR-Gr
 <script>
 const navbar = document.getElementById('navbar')
 window.onload = () => {
+  if (!navbar) return
   if (window.pageYOffset > 100) {
     navbar.classList.remove('text-primary-content')
     navbar.classList.add('bg-base-100')
@@ -100,6 +101,7 @@ window.onload = () => {
   }
 }
 window.onscroll = () => {
+  if (!navbar) return
   if (window.pageYOffset > 100) {
     navbar.classList.remove('text-primary-content')
     navbar.classList.add('bg-base-100')
