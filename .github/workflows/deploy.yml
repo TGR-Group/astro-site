@@ -14,15 +14,15 @@ permissions:
   pages: write
   id-token: write
 
-env:
-  GH_TOKEN: ${{ secrets.GH_TOKEN }}
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v3
+      - name: Create dot env file
+      - shell: bash
+        run: echo "GH_TOKEN=${{ secrets.GH_TOKEN }}" >> .env
       - name: Install, build, and upload your site output
         uses: withastro/action@v0
         # with:
