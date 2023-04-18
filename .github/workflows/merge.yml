@@ -1,0 +1,31 @@
+name: Auto Merge
+on: [pull_request]
+permissions:
+  pull-requests: write
+  contents: write
+jobs:
+  approve:
+    runs-on: ubuntu-latest
+    env:
+      PR_URL: ${{github.event.pull_request.html_url}}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Approve PR
+        run: gh pr review "$PR_URL" --approve
+  merge:
+    runs-on: ubuntu-latest
+    env:
+      PR_URL: ${{github.event.pull_request.html_url}}
+      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+    steps:
+      - name: Enable auto-merge
+        run: gh pr merge --merge --auto "$PR_URL"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout your repository using git
+        uses: actions/checkout@v3
+      - name: Create dot env file
+        run: echo "GH_TOKEN=${{ secrets.GH_TOKEN }}" > .env
+      - name: Install, build, and upload your site output
+        uses: withastro/action@v0
