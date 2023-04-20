@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content'
 import { format } from 'date-fns'
+import { themeColor } from '../../functions'
 import Layout from '../../layouts/Layout.astro'
 
 const posts = await getCollection('blog', ({ data }) => {
@@ -17,27 +18,27 @@ const posts = await getCollection('blog', ({ data }) => {
     </div>
     <div class="p-6">
       <h1 class="text-3xl font-bold mb-6">最近の投稿</h1>
-      <ul class="md:grid md:grid-cols-2 md:gap-6">
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-6">
         {posts.map(post => (
         <li>
-          <div class="card shadow-xl border border-neutral">
-            <div class="card-body">
+          <div class="card shadow border border-3 bg-white">
+            <div class="card-body" style={`color: ${themeColor(post.data.colorHue, 0.2, 10)};`}>
               <a href={`/blog/posts/${post.slug}`}>
-                <h2 class="card-title text-3xl">{post.data.title}</h2>
+                <h2 class="card-title text-4xl font-bold">{post.data.title}</h2>
               </a>
               <div class="inline-block">
                 {post.data.tags.map(tag => (
-                <a href={`/blog/tags/${tag}`} class="mr-3 badge p-3 border-0 bg-primary-content text-primary-focus"># {tag}</a>
+                <a href={`/blog/tags/${tag}`} class="mr-3 badge p-3 border-0" style={`background-color: ${themeColor(post.data.colorHue, 1, 1.15)}; color: ${themeColor(post.data.colorHue, 0.4, 10)};`}># {tag}</a>
                 ))}
               </div>
-              <a href={`/blog/author/${post.data.author}`} target="_blank" class="mt-5">
-                <div class="flex gap-3">
+              <a href={`/blog/author/${post.data.author}`} target="_blank" class="mt-5 w-fit">
+                <div class="flex gap-3 w-fit">
                   <div class="flex-none avatar">
                     <div class="w-10 h-10 rounded-full">
                       <img src={`https://github.com/${post.data.author}.png`} alt={`avatar_${post.data.author}`} />
                     </div>
                   </div>
-                  <div class="text-sm">
+                  <div class="flex-none text-sm">
                     <p>{post.data.author}</p>
                     <p>{format(post.data.pubDate, 'MMM dd, yyyy')}</p>
                   </div>
