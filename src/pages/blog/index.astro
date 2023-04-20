@@ -22,13 +22,13 @@ const posts = await getCollection('blog', ({ data }) => {
         {posts.map(post => (
         <li>
           <div class="card shadow border border-3 bg-white">
-            <div class="card-body" style={`color: ${themeColor(post.data.colorHue, 0.2, 10)};`}>
+            <div class="card-body" style={`color: ${themeColor(post.data.themeHue, 0.2, 10)};`}>
               <a href={`/blog/posts/${post.slug}`}>
                 <h2 class="card-title text-4xl font-bold">{post.data.title}</h2>
               </a>
               <div class="inline-block">
                 {post.data.tags.map(tag => (
-                <a href={`/blog/tags/${tag}`} class="mr-3 badge p-3 border-0" style={`background-color: ${themeColor(post.data.colorHue, 1, 1.15)}; color: ${themeColor(post.data.colorHue, 0.4, 10)};`}># {tag}</a>
+                <a href={`/blog/tags/${tag}`} class="mr-3 badge p-3 border-0" style={`background-color: ${themeColor(post.data.themeHue, 1, 1.15)}; color: ${themeColor(post.data.themeHue, 0.4, 10)};`}># {tag}</a>
                 ))}
               </div>
               <a href={`/blog/author/${post.data.author}`} target="_blank" class="mt-5 w-fit">

@@ -2,7 +2,7 @@
 title: Title
 author: laddge
 tags: [example]
-colorHue: 195
+themeHue: 195
 pubDate: 2023-04-19
 ---
 
