@@ -16,7 +16,7 @@ const posts = await getCollection('blog', ({ data }) => {
         Blog !!
       </div>
     </div>
-    <div class="p-6">
+    <div class="p-6 container mx-auto">
       <h1 class="text-3xl font-bold mb-6">最近の投稿</h1>
       <ul class="grid grid-cols-1 md:grid-cols-2 gap-6">
         {posts.map(post => (
@@ -24,7 +24,7 @@ const posts = await getCollection('blog', ({ data }) => {
           <div class="card shadow border border-3 bg-white">
             <div class="card-body" style={`color: ${themeColor(post.data.themeHue, 0.2, 10)};`}>
               <a href={`/blog/posts/${post.slug}`}>
-                <h2 class="card-title text-4xl font-bold">{post.data.title}</h2>
+                <h2 class="card-title text-3xl font-bold">{post.data.title}</h2>
               </a>
               <div class="inline-block">
                 {post.data.tags.map(tag => (
