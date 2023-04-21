@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content'
 import { format } from 'date-fns'
 import { themeColor } from '../../functions'
+import { Img } from 'astro-imagetools/components'
 import Layout from '../../layouts/Layout.astro'
 
 const posts = await getCollection('blog', ({ data }) => {
@@ -35,7 +36,7 @@ const posts = await getCollection('blog', ({ data }) => {
                 <div class="flex gap-3 w-fit">
                   <div class="flex-none avatar">
                     <div class="w-10 h-10 rounded-full">
-                      <img src={`https://github.com/${post.data.author}.png`} alt={`avatar_${post.data.author}`} />
+                      <Img src={`https://github.com/${post.data.author}.png`} alt={`avatar_${post.data.author}`} />
                     </div>
                   </div>
                   <div class="flex-none text-sm">

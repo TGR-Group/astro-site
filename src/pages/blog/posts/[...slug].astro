@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content'
 import { format } from 'date-fns'
 import { themeColor } from '/src/functions'
+import { Img } from 'astro-imagetools/components'
 import Layout from '/src/layouts/Layout.astro'
 
 export const getStaticPaths = async () => {
@@ -29,7 +30,7 @@ const { Content, headings } = await post.render()
           <div class="flex gap-2 w-fit items-center">
             <div class="flex-none avatar">
               <div class="w-6 h-6 rounded-full">
-                <img src={`https://github.com/${post.data.author}.png`} alt={`avatar_${post.data.author}`} />
+                <Img src={`https://github.com/${post.data.author}.png`} alt={`avatar_${post.data.author}`} />
               </div>
             </div>
             <div class="flex-none">
