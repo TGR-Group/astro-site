@@ -1,0 +1,48 @@
+---
+import { getCollection } from 'astro:content'
+import { format } from 'date-fns'
+import { themeColor } from '/src/functions'
+import Layout from '/src/layouts/Layout.astro'
+
+export const getStaticPaths = async () => {
+  const posts = await getCollection('blog')
+  return posts.map(post => ({
+    params: { slug: post.slug }, props: { post }
+  }))
+}
+
+const { post } = Astro.props
+const { Content, headings } = await post.render()
+---
+
+<Layout title="" desc="">
+  <div class="min-h-screen bg-base-100">
+    <div class="text-center">
+      <div class="px-6 pt-32 pb-16" style={`background-color: ${themeColor(post.data.themeHue, 0.5, 1.05)}; color: ${themeColor(post.data.themeHue, 0.4, 10)};`}>
+        <h1 class="text-3xl font-bold my-3">{post.data.title}</h1>
+        <div class="inline-block my-3">
+          {post.data.tags.map(tag => (
+          <a href={`/blog/tags/${tag}`} class="m-1 badge p-3 border-0" style={`background-color: ${themeColor(post.data.themeHue, 0.4, 7)}; color: ${themeColor(post.data.themeHue, 0.4, 1)};`}># {tag}</a>
+          ))}
+        </div>
+        <a href={`/blog/author/${post.data.author}`} class="mt-3 w-fit block mx-auto">
+          <div class="flex gap-2 w-fit items-center">
+            <div class="flex-none avatar">
+              <div class="w-6 h-6 rounded-full">
+                <img src={`https://github.com/${post.data.author}.png`} alt={`avatar_${post.data.author}`} />
+              </div>
+            </div>
+            <div class="flex-none">
+              {post.data.author}
+            </div>
+          </div>
+        </a>
+        <div class="mt-2">
+          {format(post.data.pubDate, 'MMM dd, yyyy')}
+        </div>
+      </div>
+    </div>
+    <div class="p-6 container mx-auto prose">
+      <Content />
+    </div>
+</Layout>
