@@ -1,4 +1,5 @@
-import { hsl, distance, contrast } from 'chroma-js'
+import chroma from 'chroma-js'
+const { hsl, distance, contrast } = chroma
 
 export const themeColor = (hue: number, sat: number, ctr: number) => {
   let left: number = 0

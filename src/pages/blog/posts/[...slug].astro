@@ -1,9 +1,9 @@
 ---
 import { getCollection } from 'astro:content'
 import { format } from 'date-fns'
-import { themeColor } from '/src/functions'
+import { themeColor } from '../../../functions'
 import { Img } from 'astro-imagetools/components'
-import Layout from '/src/layouts/Layout.astro'
+import Layout from '../../../layouts/Layout.astro'
 
 export const getStaticPaths = async () => {
   const posts = await getCollection('blog')
@@ -13,7 +13,7 @@ export const getStaticPaths = async () => {
 }
 
 const { post } = Astro.props
-const { Content, headings } = await post.render()
+const { Content } = await post.render()
 ---
 
 <Layout title="" desc="">
@@ -22,7 +22,7 @@ const { Content, headings } = await post.render()
       <div class="px-6 pt-32 pb-16" style={`background-color: ${themeColor(post.data.themeHue, 0.5, 1.05)}; color: ${themeColor(post.data.themeHue, 0.4, 10)};`}>
         <h1 class="text-3xl font-bold my-3">{post.data.title}</h1>
         <div class="inline-block my-3">
-          {post.data.tags.map(tag => (
+          {post.data.tags.map((tag: string) => (
           <a href={`/blog/tags/${tag}`} class="m-1 badge p-3 border-0" style={`background-color: ${themeColor(post.data.themeHue, 0.4, 7)}; color: ${themeColor(post.data.themeHue, 0.4, 1)};`}># {tag}</a>
           ))}
         </div>
@@ -46,4 +46,5 @@ const { Content, headings } = await post.render()
     <div class="p-6 container mx-auto prose">
       <Content />
     </div>
+  </div>
 </Layout>
