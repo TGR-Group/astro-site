@@ -2,7 +2,6 @@
 title: Title
 author: laddge
 tags: [example]
-themeHue: 0
 pubDate: 2023-04-19
 ---
 

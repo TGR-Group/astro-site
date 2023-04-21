@@ -6,7 +6,6 @@ tags:
   - NodeJS
   - Nuxt
   - 備忘録
-themeHue: 130
 pubDate: 2023-04-20
 ---
 
