@@ -21,6 +21,7 @@ const blog = defineCollection({
     author: membersUnion,
     tags: z.string().array().min(1).max(5),
     pubDate: z.date(),
+    ogTheme: z.string().default('skyblue'),
     draft: z.boolean().default(false)
   })
 })
