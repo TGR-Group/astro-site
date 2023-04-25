@@ -14,6 +14,6 @@ export const get = async ({ params }: APIContext) => {
   if (!params.slug) return
   const post = await getEntryBySlug('blog', params.slug)
   if (!post) return
-  const body = await getOgImage(post.data.title, String(post.data.author), format(post.data.pubDate, 'yyyy-MM-dd'), post.data.ogTheme)
+  const body = await getOgImage(post.data.title, String(post.data.author), format(post.data.pubDate, 'yyyy.MM.dd'), post.data.ogTheme)
   return { body, encoding: 'binary' }
 }
