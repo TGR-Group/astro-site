@@ -1,4 +1,4 @@
-name: Auto Merge
+name: PR Merge
 on: [pull_request]
 permissions:
   pull-requests: write
