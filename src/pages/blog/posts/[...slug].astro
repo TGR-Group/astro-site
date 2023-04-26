@@ -14,7 +14,7 @@ const { post } = Astro.props
 const { Content } = await post.render()
 ---
 
-<Layout title="" desc="">
+<Layout title={post.data.title} desc={`${post.data.author}の記事`}>
   <div class="min-h-screen bg-base-100">
     <div class="p-6 prose text-neutral mx-auto">
       <div class="pt-16">
