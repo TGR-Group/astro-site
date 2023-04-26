@@ -4,7 +4,9 @@ import PostList from '../../../components/PostList.svelte'
 import Layout from '../../../layouts/Layout.astro'
 
 export const getStaticPaths = async () => {
-  const posts = await getCollection('blog')
+  const posts = await getCollection('blog', ({ data }) => {
+    return data.draft !== true
+  })
   return posts.map(post => ({
     params: { author: post.data.author }, props: { author: post.data.author, posts: posts.filter(p => p.data.author == post.data.author) }
   }))

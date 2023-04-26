@@ -4,7 +4,9 @@ import PostList from '../../../components/PostList.svelte'
 import Layout from '../../../layouts/Layout.astro'
 
 export const getStaticPaths = async () => {
-  const posts = await getCollection('blog')
+  const posts = await getCollection('blog', ({ data }) => {
+    return data.draft !== true
+  })
   return posts.map(post => (
     post.data.tags.map(tag => ({
       params: { tag: tag }, props: { tag, posts: posts.filter(p => p.data.tags.indexOf(tag) !== -1) }
