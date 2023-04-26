@@ -51,7 +51,7 @@
           <a href={`/blog/tags/${tag}`} class="mr-3"># {tag}</a>
           {/each}
         </div>
-        <a href={`/blog/author/${String(post.data.author)}`} target="_blank" class="mt-5 w-fit">
+        <a href={`/blog/author/${String(post.data.author)}`} class="mt-5 w-fit">
           <div class="flex gap-3 w-fit">
             <div class="flex-none avatar">
               <div class="w-10 h-10 rounded-full">
