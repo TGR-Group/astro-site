@@ -1,4 +1,6 @@
 ---
+import TgrIcon from '../components/TgrIcon.astro'
+
 export interface Props {
   title: string;
   desc: string;
@@ -24,9 +26,10 @@ const { title, desc } = Astro.props;
     <div class="bg-base-100">
       <slot />
     </div>
-    <footer class="footer footer-center p-4 bg-neutral text-neutral-content sticky top-[100vh]">
+    <footer class="footer footer-center p-10 bg-neutral text-neutral-content sticky top-[100vh]">
       <div>
-        <p>&copy; 2023 TGR Group</p>
+        <TgrIcon classSvg="fill-neutral-content h-10" />
+        <p class="font-bold">&copy; 2023 TGR Group</p>
       </div>
     </footer>
   </body>
