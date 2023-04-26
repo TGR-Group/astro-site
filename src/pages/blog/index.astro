@@ -1,0 +1,23 @@
+---
+import { getCollection } from 'astro:content'
+import PostList from '../../components/PostList.svelte'
+import Layout from '../../layouts/Layout.astro'
+
+const posts = await getCollection('blog', ({ data }) => {
+  return data.draft !== true
+})
+---
+
+<Layout title="Blog - TGR Group" desc="メンバーによるブログ">
+  <div class="min-h-screen bg-base-100">
+    <div class="px-6 pt-28 pb-16 text-center">
+      <div class="text-5xl font-bold">
+        Blog !!
+      </div>
+    </div>
+    <div class="p-6 container mx-auto">
+      <h1 class="text-3xl font-bold mb-6">最近の投稿</h1>
+      <PostList posts={posts} client:load />
+    </div>
+  </div>
+</Layout>
