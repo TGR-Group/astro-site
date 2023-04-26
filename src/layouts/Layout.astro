@@ -19,11 +19,11 @@ const { title, desc } = Astro.props;
     <meta name="description" content={desc} />
     <title>{title}</title>
   </head>
-  <body class="h-full">
+  <body class="min-h-full bg-base-100">
     <div id="navbar" class="navbar bg-base-100 bg-opacity-90 backdrop-blur fixed top-0 z-10">
       <a href="/" class="btn btn-ghost normal-case text-xl">TGR Group</a>
     </div>
-    <div class="bg-base-100">
+    <div class="pb-6">
       <slot />
     </div>
     <footer class="footer footer-center p-10 bg-neutral text-neutral-content sticky top-[100vh]">

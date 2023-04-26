@@ -9,22 +9,20 @@ const tags = Array.from(new Set(posts.map(post => post.data.tags).flat())).sort(
 ---
 
 <Layout title={`Tags - TGR Group Blog`} desc={`タグの一覧`}>
-  <div class="min-h-screen bg-base-100">
-    <div class="px-6 pt-16 pb-16 text-center">
-      <a href="/blog" class="text-lg flex gap-2 items-center underline">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
-        Blog
-      </a>
-      <div class="text-5xl font-bold mt-12">
-        タグ一覧
-      </div>
+  <div class="px-6 pt-16 pb-16 text-center">
+    <a href="/blog" class="text-lg flex gap-2 items-center underline">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
+      Blog
+    </a>
+    <div class="text-5xl font-bold mt-12">
+      タグ一覧
     </div>
-    <div class="p-6 container mx-auto">
-      <ul class="text-xl text-center">
-        {tags.map(tag => (
-        <li class="mb-6"><a href={`/blog/tags/${tag}`}># {tag}</a></li>
-        ))}
-      </ul>
-    </div>
+  </div>
+  <div class="p-6 container mx-auto">
+    <ul class="text-xl text-center">
+      {tags.map(tag => (
+      <li class="mb-6"><a href={`/blog/tags/${tag}`}># {tag}</a></li>
+      ))}
+    </ul>
   </div>
 </Layout>
