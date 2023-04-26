@@ -90,25 +90,18 @@ const members = await octokit.paginate('GET /orgs/{org}/members', { org: 'TGR-Gr
 </Layout>
 
 <script>
-const navbar = document.getElementById('navbar')
-window.onload = () => {
-  if (!navbar) return
-  if (window.pageYOffset > 100) {
-    navbar.classList.remove('text-primary-content')
-    navbar.classList.add('bg-base-100')
-  } else if (window.pageYOffset < 50) {
-    navbar.classList.remove('bg-base-100')
-    navbar.classList.add('text-primary-content')
+  const toggleNavbar = () => {
+    const navbar = document.getElementById('navbar')
+    if (!navbar) return
+    if (window.pageYOffset > 100) {
+      navbar.classList.remove('text-primary-content')
+      navbar.classList.add('bg-base-100')
+    } else if (window.pageYOffset < 50) {
+      navbar.classList.remove('bg-base-100')
+      navbar.classList.add('text-primary-content')
+    }
   }
-}
-window.onscroll = () => {
-  if (!navbar) return
-  if (window.pageYOffset > 100) {
-    navbar.classList.remove('text-primary-content')
-    navbar.classList.add('bg-base-100')
-  } else if (window.pageYOffset < 50) {
-    navbar.classList.remove('bg-base-100')
-    navbar.classList.add('text-primary-content')
-  }
-}
+
+  window.addEventListener('load', toggleNavbar)
+  window.addEventListener('scroll', toggleNavbar)
 </script>
