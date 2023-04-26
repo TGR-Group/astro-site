@@ -2,22 +2,35 @@
   import type { CollectionEntry } from 'astro:content'
   import { format } from 'date-fns'
   import queryString from 'query-string'
+  import { z } from 'zod'
   export let posts: CollectionEntry<'blog'>[]
 
   const pages = Math.ceil(posts.length / 6)
-  let page = 1
+  let page: number = 1
 
   const chPage = (p: number) => {
     if (typeof window === 'undefined') return
     page = p
-    window.history.pushState({}, '', window.location.href.replace(/\?.*/, `?page=${p}`))
+    const url = queryString.parseUrl(window.location.href, {parseFragmentIdentifier: true})
+    if (p == 1) {
+      delete url.query.page
+    } else {
+      url.query.page = `${p}`
+    }
+    window.history.pushState({}, '', queryString.stringifyUrl(url))
     window.scroll({ top: 0, behavior: 'smooth' })
   }
 
   if (typeof window !== 'undefined') {
-    page = Number(queryString.parse(window.location.search).page)
-    if (!page || page > pages) {
-      chPage(1)
+    const p = Number(queryString.parse(window.location.search).page)
+    const pageSchema = z.number().int().min(2).max(pages)
+    if (pageSchema.safeParse(p).success) {
+      page = p
+    } else {
+      page = 1
+      const url = queryString.parseUrl(window.location.href, {parseFragmentIdentifier: true})
+      delete url.query.page
+      window.history.replaceState({}, '', queryString.stringifyUrl(url))
     }
   }
 </script>
