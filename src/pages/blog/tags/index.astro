@@ -2,7 +2,9 @@
 import { getCollection } from 'astro:content'
 import Layout from '../../../layouts/Layout.astro'
 
-const posts = await getCollection('blog')
+const posts = await getCollection('blog', ({ data }) => {
+  return data.draft !== true
+})
 const tags = Array.from(new Set(posts.map(post => post.data.tags).flat())).sort()
 ---
 
