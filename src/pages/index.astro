@@ -102,6 +102,6 @@ const members = await octokit.paginate('GET /orgs/{org}/members', { org: 'TGR-Gr
     }
   }
 
-  window.addEventListener('load', toggleNavbar)
+  toggleNavbar()
   window.addEventListener('scroll', toggleNavbar)
 </script>
