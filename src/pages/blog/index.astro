@@ -9,15 +9,13 @@ const posts = await getCollection('blog', ({ data }) => {
 ---
 
 <Layout title="Blog - TGR Group" desc="メンバーによるブログ">
-  <div class="min-h-screen bg-base-100">
-    <div class="px-6 pt-28 pb-16 text-center">
-      <div class="text-5xl font-bold">
-        Blog !!
-      </div>
+  <div class="px-6 pt-28 pb-16 text-center">
+    <div class="text-5xl font-bold">
+      Blog !!
     </div>
-    <div class="p-6 container mx-auto">
-      <h1 class="text-3xl font-bold mb-6">最近の投稿</h1>
-      <PostList posts={posts} client:load />
-    </div>
+  </div>
+  <div class="p-6 container mx-auto">
+    <h1 class="text-3xl font-bold mb-6">最近の投稿</h1>
+    <PostList posts={posts} client:load />
   </div>
 </Layout>
