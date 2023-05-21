@@ -114,16 +114,24 @@ const members = await octokit.paginate('GET /orgs/{org}/members', { org: 'TGR-Gr
   </div>
 </Layout>
 
+<style is:global>
+  #navbar {
+    @apply bg-transparent text-primary-content;
+  }
+
+  #navbar.scrolled {
+    @apply bg-base-100/[.9] text-base-content;
+  }
+</style>
+
 <script>
   const toggleNavbar = () => {
     const navbar = document.getElementById('navbar')
     if (!navbar) return
-    if (window.pageYOffset > 100) {
-      navbar.classList.remove('text-primary-content')
-      navbar.classList.add('bg-base-100')
-    } else if (window.pageYOffset < 50) {
-      navbar.classList.remove('bg-base-100')
-      navbar.classList.add('text-primary-content')
+    if (window.pageYOffset > 250) {
+      navbar.classList.add('scrolled')
+    } else if (window.pageYOffset < 200) {
+      navbar.classList.remove('scrolled')
     }
   }
 
