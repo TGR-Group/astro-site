@@ -125,16 +125,23 @@ const members = await octokit.paginate('GET /orgs/{org}/members', { org: 'TGR-Gr
 </style>
 
 <script>
-  const toggleNavbar = () => {
-    const navbar = document.getElementById('navbar')
-    if (!navbar) return
-    if (window.pageYOffset > 250) {
-      navbar.classList.add('scrolled')
-    } else if (window.pageYOffset < 200) {
-      navbar.classList.remove('scrolled')
-    }
-  }
+  const navbar = document.querySelector('#navbar')
+  const hero = document.querySelector('.hero')
 
-  toggleNavbar()
-  window.addEventListener('scroll', toggleNavbar)
+  if (navbar && hero) {
+    const callback = (entries: IntersectionObserverEntry[]) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          navbar.classList.remove('scrolled')
+        } else {
+          navbar.classList.add('scrolled')
+        }
+      }
+    }
+
+    const observer = new IntersectionObserver(callback, {
+      rootMargin: `-${navbar.clientHeight}px 0px 0px 0px`,
+    })
+    observer.observe(hero)
+  }
 </script>
