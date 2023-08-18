@@ -5,7 +5,7 @@ import TgrIcon from '../components/TgrIcon.astro'
 import Layout from '../layouts/Layout.astro'
 
 const octokit = new Octokit({
-  auth: atob('Z2hwX3RYc2RRRU9FWmdQdEVMU1RsYTd3WlZoZFdqSHBhSjN2SGczNw==')
+  auth: import.meta.env.GH_TOKEN
 })
 
 const members = await octokit.paginate('GET /orgs/{org}/members', { org: 'TGR-Group' })

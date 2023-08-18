@@ -3,7 +3,7 @@ import type { ZodLiteral, Primitive } from 'zod'
 import { Octokit } from '@octokit/rest'
 
 const octokit = new Octokit({
-  auth: atob('Z2hwX3RYc2RRRU9FWmdQdEVMU1RsYTd3WlZoZFdqSHBhSjN2SGczNw==')
+  auth: import.meta.env.GH_TOKEN
 })
 
 const members = await octokit.paginate('GET /orgs/{org}/members', { org: 'TGR-Group' })
