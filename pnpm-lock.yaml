@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -65,6 +65,9 @@ dependencies:
   tailwindcss:
     specifier: ^3.3.3
     version: 3.3.3
+  zod:
+    specifier: ^3.22.2
+    version: 3.22.2
 
 devDependencies:
   '@tailwindcss/typography':
@@ -2647,6 +2650,7 @@ packages:
     resolution: {integrity: sha512-pGjwhsmsp4kL2RTz08wcOlGN83otlqHeD/Z5T8GXZB+/YcpQ/dgo+lbU8ZsGxV0HIvqqxo9l7mqYwyYMD9bKDg==}
     engines: {node: '>=0.10'}
     hasBin: true
+    requiresBuild: true
     dev: false
     optional: true
 
@@ -4604,6 +4608,7 @@ packages:
 
   /node-addon-api@4.3.0:
     resolution: {integrity: sha512-73sE9+3UaLYYFmDsFZnqCInzPyh3MqIwZO9cw58yIqAZhONrrabrYyYe3TuIqtIiOuTXVhsGau8hcrhhwSsDIQ==}
+    requiresBuild: true
     dev: false
     optional: true
 
