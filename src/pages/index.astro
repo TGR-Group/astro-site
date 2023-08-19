@@ -12,7 +12,7 @@ const members = await octokit.paginate('GET /orgs/{org}/members', { org: 'TGR-Gr
 ---
 
 <Layout title="TGR Group" desc="TGR Group">
-  <div class="hero min-h-screen bg-gradient-to-br from-primary to-secondary text-primary-content">
+  <div class="hero min-h-screen bg-gradient-to-br from-primary to-secondary text-primary-content" style={{ minHeight: '100svh' }}>
     <div class="hero-content text-center">
       <div class="max-w-md">
         <TgrIcon classSvg="h-36 mx-auto my-6 fill-primary-content" classT="fill-neutral" />
