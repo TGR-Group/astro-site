@@ -18,27 +18,19 @@ jobs:
         with:
           node-version: 18
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2.2.2
-        with:
-          version: 8.6.12
-
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        shell: bash
+      - name: Setup yarn
         run: |
-          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+          corepack enable
+          corepack prepare yarn@1.22.19 --activate
 
-      - name: Setup pnpm cache
+      - name: Setup cache
         uses: actions/cache@v3
         with:
-          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+          path: node_modules
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
 
       - name: Install dependencies
-        run: pnpm i --frozen-lockfile
+        run: yarn --check-files --frozen-lockfile --non-interactive
 
       - name: Type check
-        run: pnpm type-check
+        run: yarn type-check
