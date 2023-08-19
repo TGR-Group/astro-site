@@ -73,7 +73,7 @@
 <div class="text-center">
   <div class="btn-group my-6">
     {#each Array.from({length: pages}, (_, k) => k + 1) as p}
-      <button class={`btn${p == page ? ' btn-active' : ''}`} on:click={() => chPage(p)}>{p}</button>
+      <button class={`btn btn-neutral${p == page ? ' btn-active' : ''}`} on:click={() => chPage(p)}>{p}</button>
     {/each}
   </div>
 </div>
