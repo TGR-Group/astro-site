@@ -13,13 +13,25 @@ const { title, desc } = Astro.props;
 <html lang="ja" data-theme="winter" class="h-full bg-neutral">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="/android-chrome-192x192.png">
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <title>{title}</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:site_name" content={title} />
+    <meta property="og:description" content={desc} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@TGRGroup_PR" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={desc} />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={desc} />
-    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/android-chrome-192x192.png">
+    <script type="text/javascript" is:inline>
+      !function(t,e,n,r,a,c,s){t[n]=t[n]||function(){(t[n].q=t[n].q||[]).push(arguments)},(c=e.createElement(r)).async=1,c.src="https://www.clarity.ms/tag/"+a,(s=e.getElementsByTagName(r)[0]).parentNode.insertBefore(c,s)}(window,document,"clarity","script","i7d8qhtkv7");
+    </script>
   </head>
   <body class="min-h-full bg-base-100">
     <div id="navbar" class="navbar bg-base-100 bg-opacity-90 backdrop-blur fixed top-0 z-10">
@@ -32,6 +44,7 @@ const { title, desc } = Astro.props;
       <div>
         <TgrIcon classSvg="fill-neutral-content h-10" />
         <p class="font-bold">&copy; 2023 TGR Group</p>
+        <p><a href="//status.tgrgroup.jp" class="link">稼働状況</a></p>
       </div>
     </footer>
   </body>
