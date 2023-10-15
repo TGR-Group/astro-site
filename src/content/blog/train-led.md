@@ -132,7 +132,7 @@ Python2にダウングレードする方法もあるようですが、めんど�
 
 下記のコマンドを実行し、Raspberry Pi にレポジトリをクローンします。
 ```bash
-git clone https;//github.com/TGR-Group/flickLED.git
+git clone https://github.com/TGR-Group/flickLED.git
 cd flickLED
 pip3 install -U -r requirements.txt
 ```
