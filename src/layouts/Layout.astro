@@ -7,6 +7,19 @@ export interface Props {
 }
 
 const { title, desc } = Astro.props;
+
+const links = {
+  services: {
+    'URL短縮': '//tgr.jp',
+    'SmartAid': '//mwindows99.com/discordbot/',
+    '稼動状況': '//status.tgrgroup.jp',
+  },
+  social: {
+    'Twitter': '//twitter.com/TGRGroup_PR',
+    'Instagram': '//instagram.com/tgrgroup_pr',
+    'GitHub': '//github.com/TGR-Group',
+  },
+}
 ---
 
 <!DOCTYPE html>
@@ -40,11 +53,22 @@ const { title, desc } = Astro.props;
     <div class="pb-6">
       <slot />
     </div>
-    <footer class="footer footer-center p-10 bg-neutral text-neutral-content sticky top-[100vh]" style={{ top: '100dvh' }}>
-      <div>
-        <TgrIcon classSvg="fill-neutral-content h-10" />
-        <p class="font-bold">&copy; 2023 TGR Group</p>
-        <p><a href="//status.tgrgroup.jp" class="link">稼働状況</a></p>
+    <footer class="p-10 bg-neutral text-neutral-content sticky top-[100vh]" style={{ top: '100dvh' }}>
+      <div class="footer max-w-2xl mx-auto">
+        {Object.entries(links).map(([group, link]) => (
+          <nav>
+            <header class="footer-title">{group}</header>
+            {Object.entries(link).map(([title, href]) => (
+              <a href={href} target="_blank" class="link link-hover">{title}</a>
+            ))}
+          </nav>
+        ))}
+      </div>
+      <div class="footer footer-center pt-14">
+        <div>
+          <TgrIcon classSvg="fill-neutral-content h-10" />
+          <p class="font-bold text-xs">&copy; 2023 TGR Group</p>
+        </div>
       </div>
     </footer>
   </body>
