@@ -36,7 +36,7 @@
 </script>
 
 <ul class="grid grid-cols-1 md:grid-cols-2 gap-6">
-  {#each posts.slice(6 * (page - 1), 6 * page) as post}
+  {#each posts.sort((a, b) => a.data.pubDate < b.data.pubDate ? 1 : -1).slice(6 * (page - 1), 6 * page) as post}
   <li>
     <div class="card shadow bg-white">
       <figure class="w-full aspect-[1200/630] bg-primary-content bg-no-repeat bg-center bg-[length:3rem_3rem]" style="background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBjbGFzcz0idy02IGgtNiI+PHBhdGggc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBkPSJNMi4yNSAxNS43NWw1LjE1OS01LjE1OWEyLjI1IDIuMjUgMCAwMTMuMTgyIDBsNS4xNTkgNS4xNTltLTEuNS0xLjVsMS40MDktMS40MDlhMi4yNSAyLjI1IDAgMDEzLjE4MiAwbDIuOTA5IDIuOTA5bS0xOCAzLjc1aDE2LjVhMS41IDEuNSAwIDAwMS41LTEuNVY2YTEuNSAxLjUgMCAwMC0xLjUtMS41SDMuNzVBMS41IDEuNSAwIDAwMi4yNSA2djEyYTEuNSAxLjUgMCAwMDEuNSAxLjV6bTEwLjUtMTEuMjVoLjAwOHYuMDA4aC0uMDA4VjguMjV6bS4zNzUgMGEuMzc1LjM3NSAwIDExLS43NSAwIC4zNzUuMzc1IDAgMDEuNzUgMHoiIC8+PC9zdmc+Cg==);">
