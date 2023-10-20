@@ -4,7 +4,7 @@ import sharp from 'sharp'
 
 export const getOgImage = async (title: string, author: string, date: string, ogTheme: string) => {
   const fontData = (await getFontData()) as ArrayBuffer;
-  const bgImage = fs.readFileSync(`./src/images/og/${ogTheme}.png`, { encoding: 'base64' })
+  const bgImage = fs.readFileSync(`./src/ogthemes/${ogTheme}.png`, { encoding: 'base64' })
   const svg = await satori(
     <div style={{
       display: 'flex',

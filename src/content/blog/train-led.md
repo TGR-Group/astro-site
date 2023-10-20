@@ -19,7 +19,7 @@ pubDate: 2023-10-15
 
 ## 構成
 
-![構成図](https://cdn.tgrgroup.jp/images/9D23F41A-F173-5D5B-6882-F79DC5D62AD5.webp)
+![構成図](../../assets/blog/9D23F41A-F173-5D5B-6882-F79DC5D62AD5.png)
 
 このような構成で制作しています。
 
@@ -84,7 +84,9 @@ Raspberry Pi の GPIO と Adafruit RGB Matrix HAT + RTC の GPIO を合体させ
 
 間違った向きに付いたりするので注意してください。
 
-<img src="https://cdn.tgrgroup.jp/images/41EEC79C-5388-04BF-00D5-8A2C9E8D059C.webp" width="50%">
+:::div{.w-1/2.mx-auto}
+![Raspberry Pi & Adafruit RGB Matrix HAT + RTC](../../assets/blog/41EEC79C-5388-04BF-00D5-8A2C9E8D059C.png)
+:::
 
 #### LEDマトリクスをRaspberry Piと接続する
 
