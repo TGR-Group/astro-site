@@ -29,9 +29,6 @@ const myRemarkPlugin = () => {
 // https://astro.build/config
 export default defineConfig({
   integrations: [astroImageTools, tailwind(), react(), svelte()],
-  experimental: {
-    assets: true
-  },
   markdown: {
     remarkPlugins: [remarkDirective, myRemarkPlugin]
   }

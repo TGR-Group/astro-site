@@ -10,10 +10,10 @@ export const getStaticPaths = async () => {
   }))
 }
 
-export const get = async ({ params }: APIContext) => {
+export const GET = async ({ params }: APIContext) => {
   if (!params.slug) return
   const post = await getEntryBySlug('blog', params.slug)
   if (!post) return
-  const body = await getOgImage(post.data.title, String(post.data.author), format(post.data.pubDate, 'yyyy.MM.dd'), post.data.ogTheme)
-  return { body, encoding: 'binary' }
+  const buffer = await getOgImage(post.data.title, String(post.data.author), format(post.data.pubDate, 'yyyy.MM.dd'), post.data.ogTheme)
+  return new Response(buffer)
 }
