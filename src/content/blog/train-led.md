@@ -155,7 +155,7 @@ sudo chmod a+x ./cgi-bin/*.py
 #### rpi-rgb-led-matrix をインストールする
 Adafruitのサイトにある[Driving Matrices](https://learn.adafruit.com/adafruit-rgb-matrix-plus-real-time-clock-hat-for-raspberry-pi/driving-matrices)の `Step 6. Log into your Pi to install and run software` に沿ってインストールしていきます。
 
-下記のコマンドを実行し、rpi-legb-led-matrix をインストールします。
+下記のコマンドを実行し、rpi-rgb-led-matrix をインストールします。
 ```bash
 curl https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/main/rgb-matrix.sh > rgb-matrix.sh
 sudo bash rgb-matrix.sh
@@ -180,4 +180,4 @@ WEBブラウザ上で、Raspberry Pi（ポート番号：8000）にアクセス�
 以前から X (Twitter) などで見かけて気になっていたので、今回制作することができてとてもうれしいです。
 
 少しいじれば、他にも新たに幕を追加もできるのでみんなもやってみてね。  
-また進展があればまた別の記事で紹介します。
+また進展があれば別の記事で紹介します。
