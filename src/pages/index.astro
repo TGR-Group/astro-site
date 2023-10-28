@@ -1,6 +1,5 @@
 ---
 import { Octokit } from '@octokit/rest'
-import { Img } from 'astro-imagetools/components'
 import TgrIcon from '../components/TgrIcon.astro'
 import Layout from '../layouts/Layout.astro'
 
@@ -81,7 +80,7 @@ const members = await octokit.paginate('GET /orgs/{org}/members', { org: 'TGR-Gr
   <div class="chat chat-start px-8 pt-16 lg:pt-20 mx-auto max-w-4xl">
     <div class="chat-image avatar">
       <div class="w-10 rounded-full">
-        <Img src="https://github.com/starprivate55.png" alt="avatat_starprivate55" />
+        <img src="https://github.com/starprivate55.png" alt="avatat_starprivate55" />
       </div>
     </div>
     <div class="chat-bubble p-6 bg-base-200 text-neutral m-0 w-full max-w-full">
@@ -100,7 +99,7 @@ const members = await octokit.paginate('GET /orgs/{org}/members', { org: 'TGR-Gr
           <div class="avatar">
             <a href={member.html_url} target="_blank">
               <div class="w-12">
-                <Img src={member.avatar_url} alt={`avatar_${member.login}`} />
+                <img src={member.avatar_url} alt={`avatar_${member.login}`} />
               </div>
             </a>
           </div>
