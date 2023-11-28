@@ -24,10 +24,10 @@ const links = {
 
 <!DOCTYPE html>
 <html lang="ja" data-theme="winter" class="h-full bg-neutral">
-  <head>
+  <head prefix="og: https://ogp.me/ns#">
     <meta charset="UTF-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
@@ -59,7 +59,7 @@ const links = {
           <nav>
             <header class="footer-title">{group}</header>
             {Object.entries(link).map(([title, href]) => (
-              <a href={href} target="_blank" class="link link-hover">{title}</a>
+              <a href={href} target="_blank" class="link link-hover" rel="noopener noreferrer">{title}</a>
             ))}
           </nav>
         ))}
