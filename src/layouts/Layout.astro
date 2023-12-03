@@ -11,7 +11,7 @@ const { title, desc } = Astro.props;
 const links = {
   services: {
     'URL短縮': '//tgr.jp',
-    'SmartAid': '//mwindows99.com/discordbot/',
+    'SmartAid': '//tgr.jp/smartaid',
     '稼動状況': '//status.tgrgroup.jp',
   },
   social: {
@@ -39,12 +39,37 @@ const links = {
     <meta name="twitter:description" content={desc} />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={desc} />
+    <link rel="preconnect dns-prefetch" href="//www.clarity.ms" />
+    <link rel="preconnect dns-prefetch" href="//challenges.cloudflare.com" />
+    <link rel="preconnect dns-prefetch" href="//static.cloudflareinsights.com" />
+    <link rel="preconnect dns-prefetch" href="//www.googletagmanager.com" />
+    <link rel="preconnect dns-prefetch" href="//www.google-analytics.com" />
+    <link rel="preconnect dns-prefetch" href="//pagead2.googlesyndication.com" />
+    <link rel="preconnect dns-prefetch" href="//fundingchoicesmessages.google.com" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="/android-chrome-192x192.png">
+    <script type="text/javascript" is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-P3TSSMK7KK"></script>
+    <script type="text/javascript" is:inline>
+      function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-P3TSSMK7KK");
+    </script>
     <script type="text/javascript" is:inline>
       !function(t,e,n,r,a,c,s){t[n]=t[n]||function(){(t[n].q=t[n].q||[]).push(arguments)},(c=e.createElement(r)).async=1,c.src="https://www.clarity.ms/tag/"+a,(s=e.getElementsByTagName(r)[0]).parentNode.insertBefore(c,s)}(window,document,"clarity","script","i7d8qhtkv7");
     </script>
+    <script type="text/javascript" is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3108820769904183" crossorigin="anonymous"></script>
+    <script type="text/javascript" is:inline async src="https://fundingchoicesmessages.google.com/i/pub-3108820769904183?ers=1" nonce="GWVRCwRSgbqGPjP5wcGdvg"></script>
+    <script type="text/javascript" is:inline nonce="GWVRCwRSgbqGPjP5wcGdvg">
+      !function e(){if(!window.frames.googlefcPresent){if(document.body){let n=document.createElement("iframe");n.style="width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;",n.style.display="none",n.name="googlefcPresent",document.body.appendChild(n)}else setTimeout(e,0)}}();
+    </script>
+    <script type="text/javascript" is:inline src="https://cdn.tgrgroup.jp/js/ads/8kadc5TOgN.js"></script>
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context" : "http://schema.org",
+      "@type" : "WebSite",
+      "name" : title,
+      "alternateName": ["TGRGroup - 公式サイト"],
+      "description": desc,
+      "url" : "https://tgrgroup.jp"
+    })}/>
   </head>
   <body class="min-h-full bg-base-100">
     <div id="navbar" class="navbar bg-base-100 bg-opacity-90 backdrop-blur fixed top-0 z-10">
