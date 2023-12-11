@@ -1,6 +1,6 @@
 ---
 title: お知らせ
-author: TGR-Group
+author: MWindows99
 tags: [announcement]
 pubDate: 2023-12-11
 ---
