@@ -4,7 +4,7 @@ author: starprivate55
 tags:
   - キーボード
   - レビュー
-pubDate: 2024-1-14
+pubDate: 2024-01-14
 ---
 
 ## はじめに
