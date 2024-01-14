@@ -17,8 +17,7 @@ pubDate: 2024-1-14
 
 ## 商品概要
 
-![](https://github.com/TGR-Group/astro-site/blob/master/src/assets/blog/255B816D-FFD2-46F4-87DA-0DBB914AE75E.jpeg?raw=true)
-  ../../assets/blog/255B816D-FFD2-46F4-87DA-0DBB914AE75E.jpeg
+![](../../assets/blog/255B816D-FFD2-46F4-87DA-0DBB914AE75E.jpeg)
 
 | 項目 | 仕様 |  
 | :---- | :---- |
@@ -41,7 +40,7 @@ pubDate: 2024-1-14
 
 まず付属品ですが、説明書と本体だけのシンプルな同梱物でした。
 
-![](https://github.com/TGR-Group/astro-site/blob/master/src/assets/blog/979E3FFB-E712-4EB4-98FF-769180AEEC5A.jpeg?raw=true)
+![](../../assets/blog/979E3FFB-E712-4EB4-98FF-769180AEEC5A.jpeg)
 
 
 ## Maestro NPadの特徴
@@ -54,7 +53,7 @@ pubDate: 2024-1-14
 
 ### CHERRY MXスイッチを搭載
 
-![](https://github.com/TGR-Group/astro-site/blob/master/src/assets/blog/8700FFC0-4A00-4AE0-A1A1-DEA8F86EB65F.jpeg?raw=true)
+![](../../assets/blog/8700FFC0-4A00-4AE0-A1A1-DEA8F86EB65F.jpeg)
 
 前述でも紹介した通り、キースイッチは CHERRY MX 製のキースイッチを採用していて「黒軸、茶軸、青軸、赤軸、静音赤軸、スピードシルバー軸、クリア軸」の7つの中から選んで購入できます。
 
@@ -73,7 +72,7 @@ pubDate: 2024-1-14
 
 ### 有線接続（脱着不可）
 
-![](https://github.com/TGR-Group/astro-site/blob/master/src/assets/blog/B1C972CF-D17A-451E-B93E-1C53EEBAD5A0.jpeg?raw=true)
+![](../../assets/blog/B1C972CF-D17A-451E-B93E-1C53EEBAD5A0.jpeg)
 
 PC との接続方法はUSBでの接続になります。
 また、脱着可能なタイプではなくキーボード本体からケーブルが生えている仕様です。 
@@ -88,7 +87,7 @@ PC との接続方法はUSBでの接続になります。
 
 ### NumLock 非連動タイプ
 
-![](https://github.com/TGR-Group/astro-site/blob/master/src/assets/blog/5A362B83-4605-42E7-B1A9-36E3C6747C6F.jpeg?raw=true)
+![](../../assets/blog/5A362B83-4605-42E7-B1A9-36E3C6747C6F.jpeg)
 
 Maestro NPad は NumLock 非連動タイプです。  
 テンキーのついていないノートパソコンで使用する際、一部のパソコンではノートパソコンのNumLockと、外付けのテンキーが連動して不具合を起こしてしまう場合があります。  
@@ -98,7 +97,7 @@ Maestro NPad は NumLock 非連動タイプです。
 
 ### 表計算ソフトで便利なキー搭載
 
-![](https://github.com/TGR-Group/astro-site/blob/master/src/assets/blog/68D4259D-85A5-4474-AC51-46D318E65A7C.jpeg?raw=true)
+![](../../assets/blog/68D4259D-85A5-4474-AC51-46D318E65A7C.jpeg)
 
 テンキー上段に右から Escape キー、Tab キー、＝キー、バックスペースキーがあります。
 
@@ -115,18 +114,18 @@ Maestro NPad は NumLock 非連動タイプです。
 
 ### タイピングしやすい
 
-![](https://github.com/TGR-Group/astro-site/blob/master/src/assets/blog/D153FD5E-32F2-4790-8237-26DA92082F17.jpeg?raw=true)
+![](../../assets/blog/D153FD5E-32F2-4790-8237-26DA92082F17.jpeg)
 
 キーが階段状に段差が持たせるステップスカルプチャー構造になっていて、すべてのキーに手が届きやすいです。
 また、一般的なキーキャップより背が低めのロープロファイルキーキャップになっていて、全体的にも背が低めの構造でノートパソコンと併用した時にも使いやすい感じがします。
 
-![](https://github.com/TGR-Group/astro-site/blob/master/src/assets/blog/955A7AB0-54E6-4AB5-982A-42D3A77B987C.jpeg?raw=true)
+![](../../assets/blog/955A7AB0-54E6-4AB5-982A-42D3A77B987C.jpeg)
 
 裏面にはラバーストッパーが設置されたチルトスタンドがあり、公式ページにはチルトスタンドを立てた状態でも安定したタイピンが可能とありますが、個人的には立てないほうが打ちやすい気がします.
 
 ### 打鍵感が良い
 
-![](https://github.com/TGR-Group/astro-site/blob/master/src/assets/blog/C8849909-2160-4667-9502-942B69232AB9.jpeg?raw=true)
+![](../../assets/blog/C8849909-2160-4667-9502-942B69232AB9.jpeg)
 
 今回、私は青軸のような音は鳴らないでほしいけど、赤軸のように軽い打鍵感も嫌だなと思い茶軸を選びました。
 
@@ -151,7 +150,7 @@ Maestro NPad は NumLock 非連動タイプです。
 
 ## まとめ
 
-![](https://github.com/TGR-Group/astro-site/blob/master/src/assets/blog/BDCF0A8C-146D-4FB1-BA12-285021939462.jpeg?raw=true)
+![](../../assets/blog/BDCF0A8C-146D-4FB1-BA12-285021939462.jpeg)
 
 今回は ARCHISS の Maestro NPad を紹介しました。  
 見ていただいた通り、少しの欠点はありますが全体的に見ればとても優れた製品です。  
