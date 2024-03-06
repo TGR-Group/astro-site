@@ -1,5 +1,5 @@
 ---
-title: VENLABのVM-600A(6000カウント)を買ったのでレビュー！
+title: VENLABのVM-600Aを買ったのでレビュー！
 author: starprivate55
 tags:
   - テスター
