@@ -5,6 +5,7 @@ import svelte from "@astrojs/svelte";
 
 import { h } from 'hastscript';
 import remarkDirective from 'remark-directive';
+import rlc from 'remark-link-card'
 import { visit } from 'unist-util-visit';
 
 const myRemarkPlugin = () => {
@@ -29,6 +30,15 @@ const myRemarkPlugin = () => {
 export default defineConfig({
   integrations: [tailwind(), react(), svelte()],
   markdown: {
-    remarkPlugins: [remarkDirective, myRemarkPlugin]
+    remarkPlugins: [
+      [
+        rlc,
+        {
+          shortenUrl: true,
+        },
+      ],
+      remarkDirective,
+      myRemarkPlugin,
+    ],
   }
 });
