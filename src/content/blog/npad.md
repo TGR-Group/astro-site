@@ -1,5 +1,5 @@
 ---
-title: ARCHISSのMaestrto NPadを買ったのでレビュー！
+title: ARCHISSのMaestro NPadを買ったのでレビュー！
 author: starprivate55
 tags:
   - キーボード
